@@ -276,7 +276,7 @@ func (s *SecureStore) NewStoredPassword(master, plaintext *SecureData, service [
 	}
 
 	// Make the password.
-	password, err := NewStoredPassword(master, plaintext, service, N, r, p)
+	password, err := NewStoredPassword(master, plaintext.Bytes(), service, N, r, p)
 	if err != nil {
 		return err
 	}
